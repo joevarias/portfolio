@@ -1,0 +1,504 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/*==== Main font ====*/
+div.font-sharetech {
+	font-family: 'Share Tech Mono', monospace;
+}
+
+/*========================================================*/
+
+		/*==== Brackgrounds start ====*/
+
+body {
+	background-color: rgba(243, 244, 246, 1) !important;
+	color: rgb(43,46,56) !important;
+}
+
+main.lineargrad__wrapper {
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+	min-height: 100vh;
+	overflow-y: auto;
+}
+
+div.about__wrapper, div.projects__wrapper {
+	background-color: rgba(249, 249, 249, .95);
+	min-height: 100vh;
+}
+
+div.contact__wrapper {
+	background-color: rgba(233,236,239);
+}
+
+div.container.about_wrapper {
+	height: 100vh;
+}
+
+div.about-slanted__wrapper :not(div) {
+  	height: 100%;
+    transform: skewY(3.5deg);
+}
+
+div.about-reverse-slanted__wrapper {
+    transform: skewY(-3.5deg);
+    background-color: rgba(233,236,239,.75);
+    background-size: cover;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+		/** Backgrounds End **/
+
+
+/*========================================================*/
+
+		/*==== Intro / Hero Start ====*/
+
+div.hero__wrapper {
+	margin-top: 10vh;
+}
+
+
+h1.hero {
+	color: #fffe66;
+	font-size: 3rem;
+}
+
+span.hero-firstline__wrapper {
+	background-color: #fcf8e3;
+	color: #000;
+	padding: 4px;
+}
+
+span.hero-web {
+	background-color: #fcf8e3;
+	color: #000;
+	padding: 4px;
+}
+
+
+		/** End Hero Text **/
+
+/*========================================================*/
+
+		/*==== SVG ====*/
+
+/*SVG size and horizontal position*/
+
+.svgdesign {
+	display: inline-block;
+	width: 100%;
+	max-width: 100%; 
+	height:auto;
+
+}
+
+.svgbuild {
+	width: 100%;
+	max-width: 100%; 
+	height:auto;
+}
+
+div.svg-design__wrapper {
+	width: 250px;
+	height:auto;
+}
+
+div.svg-build__wrapper {
+	width: 280px;
+	height: auto;
+}
+
+
+/*========================================================*/
+
+			/*==== ANIMATIONS START ====*/
+
+/*========================================================*/
+
+		/*==== #design Animation Start ====*/
+
+path.st0 {
+	stroke: #fff;
+	fill: none;
+	stroke-dasharray: 1000;
+	opacity: 0;
+	animation: animate 2.7s cubic-bezier(0,.23,1,.1);
+	animation-delay: 2.7s;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 1000;
+	}
+
+	5% {
+		opacity: 0.1;
+		fill: none;
+		stroke-dashoffset: 1000;
+	}
+
+	35% {
+		opacity: 0.4;
+		fill: none;
+		stroke-dashoffset: 1000;
+	}
+
+	85% {
+		opacity: 1;
+		fill: none;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+		opacity: 1;
+	}
+}
+
+
+		/** #design Animation End **/
+
+/*========================================================*/
+
+/*==== Hero text Animation start ====*/
+
+
+span.i.animate__animated.animate__fadeIn {
+	animation-delay: 3s;
+}
+
+span.and.animate__animated.animate__fadeIn {
+	animation-delay: 5.9s;
+}
+
+h1.thingsintheweb.animate__animated.animate__fadeIn {
+	animation-delay: 8.5s;
+}
+
+/*increase default speed of ALL Animations*/
+:root {
+  --animate-duration: .8s !important;
+}
+
+
+		/** Hero text Animation End **/
+
+/*========================================================*/
+
+			/*==== ANIMATIONS END ====*/
+
+/*========================================================*/
+
+
+		/*==== NAV START ====*/
+
+/*for navlink position*/
+div.hero__navlink, div.about__navlink, div.projects__navlink {
+	padding-top: 22vh;
+	padding-bottom: 5vh;
+}
+
+div.contact__navlink {
+	padding-bottom: 3vh
+}
+
+
+/*links label and style*/
+
+div.hero__navlink li>a {
+	color: #F5F5F5;
+}
+
+div.about__navlink li>a, div.projects__navlink li>a {
+	color: rgb(30, 58, 138);
+}
+
+div.contact__navlink li>a {
+	color: rgb(119,119,119);
+}
+
+.navlink-inpage li {
+	list-style: none;
+	display: inline-block;
+	color: black;
+	font-family: monospace, monospace;
+}
+
+.navlink-inpage li>a {
+	text-decoration: none;
+	outline: none;
+	position: relative;
+	font-weight: bold;
+}
+
+
+/*Selector (underscore) for nav link (hover)*/
+.navlink-inpage li>a:hover:after {
+	content: "";
+	border-bottom: 3px solid #FFEF00;
+	position: absolute;
+	left: 0;
+    right: 0;
+    bottom: -8px;
+}
+
+/*Selector (underscore) for nav link (focus)*/
+.navlink-inpage li>a:focus:after {
+	content: "";
+	border-bottom: 3px solid #FFEF00;
+	position: absolute;
+	left: 0;
+    right: 0;
+    bottom: -8px;
+}
+
+.navlink-inpage li>a:active:after {
+	content: "";
+	border-bottom: 3px solid #FFEF00;
+	position: absolute;
+	left: 0;
+    right: 0;
+    bottom: -8px;
+}
+
+
+
+/** NAV END **/
+
+/*========================================================*/
+
+			/*==== About Start ====*/
+
+hr.hr-about {
+	margin-top: 6vh;
+	margin-left: 23vw;
+	margin-right: 23vw;
+	margin-bottom: 6vh;
+	border-color: rgb(130,130,130);
+}
+
+
+div.parallax__about {
+	min-height: 100vh;
+}
+
+div.parallax-overlay__about {
+	background-color: rgba(55, 65, 81,.1);
+	z-index: 2;
+	position: relative;
+}
+
+
+h1.about-name {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: bold;
+}
+
+h2.about-role {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+}
+
+div.about-me__wrapper {
+	line-height: 30px;
+	font-family: 'Segoe UI Emoji';
+
+}
+
+		/** About End **/
+
+/*========================================================*/
+
+		/*==== Dividers ====*/
+
+div.page-divider {
+	margin: 4vh 10vw 4vh 10vw;
+
+}
+
+/*========================================================*/
+
+		/*==== PROJECTS Start ====*/
+
+h1.projects__headertext {
+	font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+img.projects-thumb {
+	height: 169px;
+	width: 300px;
+  	-webkit-box-shadow: 0 0 1px 1px #000;
+  	-moz-box-shadow:    0 0 1px 1px #000;
+  	box-shadow:         0 0 1px 1px #000;
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+}
+
+
+li.projects-highlights__list {
+	font-weight: 650;
+}
+
+.projects__header {
+	color: rgb(1, 52, 89);
+	font-weight: 650;
+}
+
+ul.projects-highlights__list > li {
+	font-weight: 650;
+}
+
+
+a.projects-disabled__link {
+  pointer-events: none;
+  cursor: default;
+  opacity: .4;
+}
+
+
+
+		/** Projects End **/
+
+/*========================================================*/
+
+
+/*========================================================*/
+
+		/*==== CONTACT Start ====*/
+
+div.parallax__contact {
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+div.contact__wrapper {
+	margin-top: 100px;
+}
+
+div.parallax-overlay__contact {
+	z-index: 2;
+	position: relative;
+}
+
+h1.jumbotron-contact__header {
+	font-size: 3.5rem;
+    font-weight: 300;
+}
+
+p.jumbotron-contact__lead {
+	font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p.contact-linkedin__wrapper {
+
+}
+
+
+		/** Contact End **/
+
+	/*======== Media Queries ========*/
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+
+	h1.hero {
+		font-size: 2.5rem;
+	}
+
+	div.svg-design__wrapper {
+		width: 200px;
+	}
+
+	div.svg-build__wrapper {
+		width: 280px;
+		height: auto;
+	}
+
+	div.hero__navlink, div.about__navlink, div.projects__navlink, div.contact__navlink {
+		font-size: 12px;
+	}
+
+	h1.jumbotron-contact__header {
+		font-size: 2.5rem;
+	    font-weight: 300;
+	}
+
+
+
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+
+	div.svg-design__wrapper {
+		width: 200px;
+	}
+
+	div.svg-build__wrapper {
+		width: 280px;
+		height: auto;
+	}
+
+	div.hero__navlink, div.about__navlink, div.projects__navlink, div.contact__navlink {
+		font-size: 12px;
+	}
+
+	h1.jumbotron-contact__header {
+		font-size: 2.5rem;
+	    font-weight: 300;
+	}
+
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) { 
+
+	div.svg-design__wrapper {
+		width: 200px;
+	}
+
+	div.svg-build__wrapper {
+		width: 280px;
+		height: auto;
+	}
+
+	div.hero__navlink, div.about__navlink, div.projects__navlink, div.contact__navlink {
+		font-size: 12px;
+	}
+
+	h1.jumbotron-contact__header {
+		font-size: 2.5rem;
+	    font-weight: 300;
+	}
+
+}
+
+
+
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) { ... }
